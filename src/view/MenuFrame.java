@@ -9,7 +9,9 @@ import javax.swing.JOptionPane;
 
 public class MenuFrame extends javax.swing.JFrame {
 
-    private javax.swing.JInternalFrame menu = new javax.swing.JInternalFrame("Menu",false,false,false);
+   // private javax.swing.JInternalFrame menu = new javax.swing.JInternalFrame("Menu",false,false,false);
+    private javax.swing.JDesktopPane menu = new javax.swing.JDesktopPane();
+    private javax.swing.JButton products = new javax.swing.JButton("Producos");
     public MenuFrame() {
         initComponents();
         GraphicsEnvironment env = GraphicsEnvironment.getLocalGraphicsEnvironment();
@@ -21,6 +23,12 @@ public class MenuFrame extends javax.swing.JFrame {
         this.add(this.menu);
   
         this.menu.setSize((int)this.getWidth()/8,this.getBounds().height-20);
+        this.menu.add(this.products);
+        this.products.setLocation(0, 0);
+        this.products.setSize(this.menu.getSize().width,this.menu.getSize().height/10);
+        this.products.setVisible(true);
+        
+        
         
         this.menu.setVisible(true);
         
